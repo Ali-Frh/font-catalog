@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای انتخاب قلم </title>
+</head>
+<body>
+    <style>
+
+        @font-face {
+            font-family: kalame;
+            src: url(font/KalamehWebFaNum-Bold.woff);
+        }
+
+        .textbox{
+            direction: rtl;
+            /* background-color: antiquewhite; */
+            /* height: 30vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* max-height: 300px; */
+            /* border-radius: 10px; */
+            /* box-shadow: 2px 2px 4px rgb(196, 196, 196); */
+        } 
+        .textbox>input {
+            border: 2px solid silver;
+            border-radius: 20px;
+            padding: 15px 20px;
+            width: 40vw;
+            min-width: 200px;
+            max-width: 400px;
+            font-size: 1rem;
+            outline: none;
+            font-weight: 700;
+            color: rgb(44, 44, 44);
+            font-family: kalame;
+        }
+        .textbox>input:focus{
+            border: 2px solid rgb(160, 160, 160);
+            box-shadow: 0px 0px 7px rgb(190, 190, 190);
+        }
+
+
+
+        .fontsprev {
+            display: grid;
+            grid-template-columns: 12fr;
+            gap: 20px;
+            margin-top: 10px;
+            background-color: bisque;
+            border-radius: 10px;
+            padding: 20px 10px;
+        }
+
+        @media screen and (max-width: 540px) {
+            .fontsprev {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (min-width: 541px) and (max-width: 800px) {
+            .fontsprev {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 801px) {
+            .fontsprev {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }        
+
+        .fontCard {
+            border:1px solid gray;
+            border-radius: 10px;
+            padding: 10px 20px 20px 20px;
+            direction: rtl;
+            background-color: rgba(250, 250, 250, 0.87);
+            line-height: 1;
+
+        }
+
+        .fontCard:hover {
+            background-color: rgba(250, 250, 250, 0.986);
+            border:1px solid rgb(110, 110, 110);
+            cursor: pointer;
+        }
+        .fontCard>p{
+            font-weight: 800;
+        }
+        body {
+            margin-top: 0;
+            font-family: kalame;
+        }
+        .head {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(255, 225, 185);
+            font-size: 1.2rem;
+            /* border:2px solid rgb(92, 44, 0); */
+            padding: 20px 25px;
+            border-radius: 20px 20px 0px 0px;
+            bottom: 0;
+            position: sticky;
+            /* position: absolute; */
+            /* width: 100%; */
+            
+            margin: 10px auto 0 auto;
+            box-shadow: 0px 0px 7px rgb(190, 190, 190);
+            align-items: center;
+        }
+
+        .desc {
+            background-color: rgb(255, 225, 185);
+            box-shadow: 0px 0px 7px rgb(190, 190, 190);
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 10px 15px;
+            direction: rtl;
+        }
+
+        .plmin {
+            display: flex;
+            flex-direction: column;
+            padding-right: 10px;
+        }
+        .plmin>button{
+            /* border-radius: 50px; */
+            /* border:0; */
+            font-size: 1rem;
+            background-color: rgb(255, 225, 185);
+            border:1px solid gray;
+            margin: 2px;
+            border-radius: 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-weight: 800;
+        }
+
+
+
+        .demotext {
+            line-height: 1.8; 
+        }
+        .plmin>button:active {
+            margin: 3px 3px 1px 1px;
+        }
+
+        .desc > h1 {
+            font-size: 1.5rem;
+        }
+
+        .desc {
+            line-height: 1.7;
+        }
+    </style>
+    
+    <div class="desc">
+        <h1>راهنمای انتخاب قلم</h1>
+        <p>خب قضیه چیه ؟
+            به بیان ساده، این صفحه به شما در انتخاب قلم (فونت) کمک می کنه.
+            <br/>
+            شما بعنوان یک طراح سایت، گرافیست و ... جهت تولید محتوا ممکنه دنبال یک قلم مناسب باشین، اما به دلیل تشابه اون ها
+            انتخاب براتون سخت باشه و بخواین همه ی قلم ها رو یکجا کنار هم ببینید، یا اینکه
+            اونقدر ها قلم های فارسی رو نمیشناسین.
+            <br/>
+            در این صفحه میتونید متن مورد نظرتونو با قلم های مختلف و اندازه ی مورد نظر
+            ببینید
+            <br/>
+            امیدوارم این صفحه برای شما و طراحی های خلاقانه تون مفید باشه 
+            <br/>
+            در صورتی که قلم زیبای دیگری رو می شناسید که جاش اینجا خالیه خوشحال میشم اون رو در قسمت Issue  معرفی کنید، اگر
+            هم نمیخواین قلم شما در این صفحه معرفی بشه میتونید بهم پیام بدین.
+            <br/>
+            سلب مسئولیت: این صفحه صرفا در جهت معرفی قلمهای مختلف فارسی و
+            استفاده ی غیر قانونی از قلم های غیر رایگان هدف این پروژه نبوده و
+            سهولت تولید کنندگان محتوا ایجاد شده، هرگونه استفاده نادرست اعم از
+        مسئولیتی متوجه من نیست.
+        <br/>
+        </p>
+    </div>
+
+    <div class="fontsprev">
+
+    </div>
+    <div class="head" dir="rtl">
+        <div class="headright">
+            تنظیمات نمونه ها
+        </div>
+        <!-- <div class="headleft">
+            b
+        </div> -->
+        
+        <div class="textbox">
+            <input oninput="changed()" class="text" type="text" value="پیرزنی رفت به گردش">
+            <div class="plmin">
+                <button onclick="grow()">A</button>
+                <button onclick="shrink()">a</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
